@@ -1,0 +1,244 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.scroll-view-container {  
+    background-color: #fff;  
+    height:100vh;  
+  } 
+.index {
+  height: 100%;
+}
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+.header-panel {
+  height: 84rpx;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #fefefe;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 0.5px 0 0 #ececec;
+}
+.header-title {
+  position: relative;
+  width: 120rpx;
+  height: 80rpx;
+  display: inline-block;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: #232323;
+  background-color:#f5dcf5;
+  text-align: center;
+}
+.header-title-active {
+  /* border-bottom: 4rpx solid #C34943; */
+  color: #c34943;
+  z-index: 99;
+  font-size: 34rpx;
+  border-bottom: 200rpx solid rgba(230, 11, 11, 0.2);
+}
+.nav-blank {
+  height: 80rpx;
+}
+/*content  */
+.scroll-view-refresh-load-component {
+  height: calc(100vh - 80rpx);
+}
+.content-top-pic {
+  position: relative;
+  height: 300rpx;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.swiper-index {
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40rpx;
+  width: 65rpx;
+  border-radius: 20rpx;
+  color: #fefefe;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+/*swiper样式覆盖  */
+.content-list {
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
+}
+
+/* .list-item {
+  height: 180rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 2.5px solid rgb(243, 217, 217);
+  border-bottom: 2.5px solid rgb(243, 217, 217);
+  border-left: 5px solid rgb(243, 217, 217);
+  border-right: 5px solid rgb(243, 217, 217);
+  background-color: #f9fffd
+}
+.list-item-content {
+  position: relative;
+  padding: 20rpx 30rpx 20rpx 30rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.list-item-left {
+  height: 140rpx;
+  width: 180rpx;
+  margin-right: 20rpx;
+  float: left;
+  background-color: #ffe0e6
+}
+.list-item-left image {
+  width: 100%;
+  height: 100%;
+}
+.list-item-right {
+  float: left;
+  width: 480rpx;
+  height: 140rpx;
+  position: relative;
+
+}
+.article-title {
+  font-size: 34rpx;
+  color: #404040;
+  overflow-y: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.article-source::before {
+  content: '作者:';
+  font-size: 24rpx;
+  color: #888;
+  margin-right: 10rpx;
+}
+.article-source {
+  font-size: 24rpx;
+  color: #888;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.article-editTime {
+  font-size: 24rpx;
+  color: #a8a8a8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} */
+.footer {
+  overflow: hidden;
+}
+.footer-component {
+  margin: 15rpx 0 30rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.news-card {
+  width: calc(50% - 6px); /* deducting twice the padding */
+  margin: 3px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  padding-bottom: 4px;
+}
+
+.news-card-content {
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 4px;
+}
+
+.news-card-top {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%; /* adjust this to control the aspect ratio of the image */
+  overflow: hidden;
+}
+
+.news-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0; /* top left and right corners rounded */
+  object-fit: cover; /* will prevent stretching */
+}
+
+.news-card-middle {
+  padding: 0 4px;
+  flex-grow: 1;
+}
+
+.news-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.article-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.article-editTime, .article-source {
+  font-size: 14px;
+}

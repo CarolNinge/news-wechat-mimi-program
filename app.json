@@ -1,0 +1,32 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/detail/detail",
+        "pages/me/me",
+        "pages/userInfo/userInfo"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "纵览天下",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "selectedColor":"#33a3dc", 
+        "list": [
+          {
+            "pagePath": "pages/index/index",
+            "text": "新闻",
+            "iconPath": "images/w_新闻 (dian).png",
+            "selectedIconPath": "images/w_新闻.png"
+          },
+          {
+            "pagePath": "pages/me/me",
+            "text": "个人",
+            "iconPath": "/images/用户.png",
+            "selectedIconPath": "/images/用户(dian).png"
+          }
+        ]
+      }
+}

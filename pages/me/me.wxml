@@ -1,0 +1,40 @@
+<view class="my-class">
+  <view class="user-info">
+      <image class="user-avatar" src="{{userBaseInfo.avatarUrl}}" mode="aspectFill"></image>
+      <view class="user-info-right">
+      <text class="user-nickname">{{userBaseInfo.nickname}}</text>
+      <text class="user-description">{{userBaseInfo.description}}</text>
+      </view>
+  </view>
+
+  <div class="user-button">
+      <a href="tapCollection" class="user-link">
+          <button class="user-button-item" wx:if="{{isCollect}}" style="background-color: #f1cbf1" >收藏</button>
+          <button class="user-button-item" wx:else bindtap="tapCollect">收藏</button>
+      </a>
+      <a href="tapLike" class="user-link">
+          <button class="user-button-item" wx:if="{{!isCollect}}" style="background-color: #f1cbf1">点赞</button>
+          <button class="user-button-item" wx:else bindtap="tapDianzan">点赞</button>
+      </a>
+      <a href="tapUserInfo" class="user-link">
+          <button class="user-button-item" bindtap="tapUserInfo">个人中心</button>
+      </a>
+  </div>
+
+  <view class='content-list'>
+    <block wx:for='{{contentNewsList}}' wx:key='{{item.newsID}}' wx:if="{{contentNewsList && contentNewsList.length > 0}}">
+      <view class='list-item' bindtap='viewDetail' data-newsurl='{{item.url}}' data-newstitle='{{item.title}}' data-newsauthor='{{item.author_name}}'  data-newsuniquekey='{{item.uniquekey}}' data-newsdate='{{item.date}}' data-newsthumbnail_pic_s='{{item.thumbnail_pic_s}}'>
+        <view class='list-item-content one-px-border'>
+          <view class='list-item-left'>
+            <image src='{{item.thumbnail_pic_s}}'></image>
+          </view>
+          <view class='list-item-right'>
+            <view class='article-title'>{{item.title}}</view>
+            <view class='article-source'>{{item.author_name}}</view>
+            <view class='article-editTime'>{{item.date}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
